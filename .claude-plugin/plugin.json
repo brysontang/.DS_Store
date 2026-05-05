@@ -1,0 +1,8 @@
+{
+  "name": "dsstore-notes",
+  "version": "0.1.0",
+  "description": "Per-file ambient notes for agentic coding tools, stored in .DS_Store under custom record code 'llMD'. Notes auto-inject into context on file read; agent is nudged to refresh them after edits.",
+  "author": { "name": "Bryson Tang" },
+  "homepage": "https://github.com/brysontang/.DS_Store",
+  "repository": "https://github.com/brysontang/.DS_Store"
+}
