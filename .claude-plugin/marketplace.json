@@ -1,0 +1,14 @@
+{
+  "name": "dsstore",
+  "owner": { "name": "Bryson Tang" },
+  "description": "Single-plugin marketplace for dsstore-notes — per-file ambient notes stored in .DS_Store under custom record code 'llMD'.",
+  "plugins": [
+    {
+      "name": "dsstore-notes",
+      "source": "./",
+      "description": "Per-file ambient notes for agentic coding tools, stored in .DS_Store under custom record code 'llMD'. Notes auto-inject into context on file read; agent is nudged to refresh them after edits.",
+      "homepage": "https://github.com/brysontang/.DS_Store",
+      "license": "MIT"
+    }
+  ]
+}

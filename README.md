@@ -15,16 +15,16 @@ The trick: there is already a per-directory, per-filename, B-tree-indexed metada
 
 ## Install
 
+```
+/plugin marketplace add brysontang/.DS_Store
+/plugin install dsstore-notes@dsstore
+```
+
+Or local dev:
+
 ```bash
-# Local dev install
 git clone git@github.com:brysontang/.DS_Store.git ~/code/dsstore-notes
 claude --plugin-dir ~/code/dsstore-notes
-```
-
-Or from git directly:
-
-```
-/plugin install git@github.com:brysontang/.DS_Store.git
 ```
 
 Requirements: macOS, [`uv`](https://github.com/astral-sh/uv) on PATH. Hook commands invoke `uv run` against the bundled `pyproject.toml`; the project auto-syncs on first invocation, no manual install step.
@@ -56,8 +56,10 @@ Requirements: macOS, [`uv`](https://github.com/astral-sh/uv) on PATH. Hook comma
 ## Layout
 
 ```
-.DS_Store/                          # the repo
-├── .claude-plugin/plugin.json      # Claude Code manifest
+.DS_Store/                          # the repo (also the marketplace)
+├── .claude-plugin/
+│   ├── marketplace.json            # single-plugin marketplace catalog
+│   └── plugin.json                 # Claude Code plugin manifest
 ├── .mcp.json                       # MCP server registration
 ├── hooks/hooks.json                # PreToolUse + PostToolUse bindings
 ├── dsstore_notes/                  # Python package (uv project)
